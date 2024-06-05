@@ -28,35 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.entirebutton = new System.Windows.Forms.Button();
+            this.newAccButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // entirebutton
             // 
-            this.button1.Location = new System.Drawing.Point(189, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = true;
+            this.entirebutton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.entirebutton.Location = new System.Drawing.Point(85, 135);
+            this.entirebutton.Name = "entirebutton";
+            this.entirebutton.Size = new System.Drawing.Size(141, 58);
+            this.entirebutton.TabIndex = 0;
+            this.entirebutton.Text = "Войти";
+            this.entirebutton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // newAccButton
             // 
-            this.button2.Location = new System.Drawing.Point(427, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Создать аккаунт";
-            this.button2.UseVisualStyleBackColor = true;
+            this.newAccButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.newAccButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newAccButton.Location = new System.Drawing.Point(85, 228);
+            this.newAccButton.Name = "newAccButton";
+            this.newAccButton.Size = new System.Drawing.Size(141, 69);
+            this.newAccButton.TabIndex = 1;
+            this.newAccButton.Text = "Создать аккаунт";
+            this.newAccButton.UseVisualStyleBackColor = false;
+            this.newAccButton.Click += new System.EventHandler(this.newAccButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(294, 450);
+            this.Controls.Add(this.newAccButton);
+            this.Controls.Add(this.entirebutton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -66,8 +70,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button entirebutton;
+        private System.Windows.Forms.Button newAccButton;
     }
 }
 

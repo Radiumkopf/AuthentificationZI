@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace AuthentificationZI
 {
-    public partial class Form1 : Form
+    public partial class CreateForm : Form
     {
-        
-        public Form1()
+        public CreateForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void backbutton_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void newAccButton_Click(object sender, EventArgs e)
-        {
-            CreateForm cf = new CreateForm();
-            cf.ShowDialog();
-            
+            this.Close();
+            //pbobpbo
         }
     }
 }
