@@ -20,7 +20,23 @@ namespace AuthentificationZI
         private void backbutton_Click(object sender, EventArgs e)
         {
             this.Close();
-            //pbobpbo
+            
+        }
+
+        private void buttondone_Click(object sender, EventArgs e)
+        {
+            differentpasslabel.Visible = false;
+            if(String.IsNullOrEmpty(textBoxLogin.Text) && String.IsNullOrEmpty(textBoxP1.Text)&&String.IsNullOrEmpty(textBoxP2.Text)) 
+            {
+                MessageBox.Show("Заполните все поля!");
+                return;
+            }
+            if (!textBoxP1.Text.Equals(textBoxP2.Text))
+            {
+                differentpasslabel.Visible = true;
+                return;
+            }
+            
         }
     }
 }
