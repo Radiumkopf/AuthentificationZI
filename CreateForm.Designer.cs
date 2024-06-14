@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateForm));
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxP1 = new System.Windows.Forms.TextBox();
             this.textBoxP2 = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.differentpasslabel = new System.Windows.Forms.Label();
+            this.buttonShowPass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxLogin
@@ -47,6 +49,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(289, 27);
             this.textBoxLogin.TabIndex = 0;
+            this.textBoxLogin.Text = "defaultlogin";
             // 
             // textBoxP1
             // 
@@ -54,8 +57,10 @@
             this.textBoxP1.Location = new System.Drawing.Point(82, 230);
             this.textBoxP1.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxP1.Name = "textBoxP1";
+            this.textBoxP1.PasswordChar = '*';
             this.textBoxP1.Size = new System.Drawing.Size(289, 27);
             this.textBoxP1.TabIndex = 1;
+            this.textBoxP1.Text = "123";
             // 
             // textBoxP2
             // 
@@ -63,8 +68,10 @@
             this.textBoxP2.Location = new System.Drawing.Point(82, 322);
             this.textBoxP2.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxP2.Name = "textBoxP2";
+            this.textBoxP2.PasswordChar = '*';
             this.textBoxP2.Size = new System.Drawing.Size(289, 27);
             this.textBoxP2.TabIndex = 2;
+            this.textBoxP2.Text = "123";
             // 
             // backbutton
             // 
@@ -138,11 +145,23 @@
             this.differentpasslabel.Text = "*Пароли не совпадают!";
             this.differentpasslabel.Visible = false;
             // 
+            // buttonShowPass
+            // 
+            this.buttonShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonShowPass.Image = ((System.Drawing.Image)(resources.GetObject("buttonShowPass.Image")));
+            this.buttonShowPass.Location = new System.Drawing.Point(378, 230);
+            this.buttonShowPass.Name = "buttonShowPass";
+            this.buttonShowPass.Size = new System.Drawing.Size(37, 27);
+            this.buttonShowPass.TabIndex = 7;
+            this.buttonShowPass.UseVisualStyleBackColor = true;
+            this.buttonShowPass.Click += new System.EventHandler(this.buttonShowPass_Click);
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 522);
+            this.ClientSize = new System.Drawing.Size(440, 522);
+            this.Controls.Add(this.buttonShowPass);
             this.Controls.Add(this.differentpasslabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -172,5 +191,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label differentpasslabel;
+        private System.Windows.Forms.Button buttonShowPass;
     }
 }

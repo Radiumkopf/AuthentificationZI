@@ -31,12 +31,34 @@ namespace AuthentificationZI
                 MessageBox.Show("Заполните все поля!");
                 return;
             }
+            if(textBoxP1.Text.Contains(' '))
+            {
+                MessageBox.Show("Пароль не может содержать пробелов!");
+                textBoxP1.Clear();
+                textBoxP2.Clear();  
+                return;
+            }
             if (!textBoxP1.Text.Equals(textBoxP2.Text))
             {
                 differentpasslabel.Visible = true;
                 return;
             }
-            
+            MyClient client = new MyClient();
+            client.Start(textBoxLogin.Text, textBoxP1.Text);
+            this.Close();
+        }
+
+        private void buttonShowPass_Click(object sender, EventArgs e)
+        {
+            if (textBoxP1.PasswordChar == '*')
+            {
+                textBoxP1.PasswordChar = '\0';
+                textBoxP2.PasswordChar = '\0';
+            }
+            else { 
+                textBoxP1.PasswordChar = '*'; 
+                textBoxP2.PasswordChar = '*'; 
+            }
         }
     }
 }
